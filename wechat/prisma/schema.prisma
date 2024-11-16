@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  name      String
+  imageUrl  String
+  email     String
+  servers   Server[]
+  members   Member[]
+  channels    Channel[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Server {
+  id         String    @id @default(uuid())
+  name       String
+  imageUrl   String
+  inviteCode String
+  profileId  String
+  profile    Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  members    Member[]
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @default(now())
+  channels    Channel[]
+
+  @@index([profileId])
+}
+
+model Member {
+  id        String   @id @default(uuid())
+  role      String
+  profileId String
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  serverId  String
+  server    Server   @relation(fields: [serverId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  @@index([profileId])
+  @@index([serverId])
+}
+
+model Channel {
+  id       String @id @default(uuid())
+  type     String
+  name     String
+  serverId String
+  server   Server @relation(fields: [serverId], references: [id], onDelete: Cascade)
+  profileId String
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  @@index([profileId])
+  @@index([serverId])
+
+}
