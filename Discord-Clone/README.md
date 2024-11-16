@@ -3,30 +3,6 @@
   <img src="https://user-images.githubusercontent.com/99184393/202888401-e3d28b8c-0c58-4951-880f-869ef4fc711f.png" alt="logo" width="205" height="auto" />
   
   <h1>Discord 2.0 with REACT.JS</h1>
-  
-  <p>
-Discord 2.0 with REACT.JS! (Next.js, NextAuth.js v4.17.0, Tailwind CSS, Typescript, Server create, Firebase v9, Image Uploading, Google Authentication, 1-1 Messaging, Real Time Messenger )
-  </p>
-
-<!-- Badges -->
-
-<a href="https://clone-sproject.vercel.app" target="_blank">![](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)</a>
-![](https://img.shields.io/badge/Maintained-Yes-indigo)
-![](https://img.shields.io/github/forks/SashenJayathilaka/Discord-Clone.svg)
-![](https://img.shields.io/github/stars/SashenJayathilaka/Discord-Clone.svg)
-![](https://img.shields.io/github/issues/SashenJayathilaka/Discord-Clone)
-![](https://img.shields.io/github/last-commit/SashenJayathilaka/Discord-Clone)
-
-<h4>
-    <a href="https://projects-seven-peach.vercel.app">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/SashenJayathilaka/Discord-Clone/blob/master/README.md">Documentation</a>
-  <span> · </span>
-    <a href="https://github.com/SashenJayathilaka/Discord-Clone/issues">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/SashenJayathilaka/Discord-Clone/issues">Request Feature</a>
-  </h4>
-</div>
 
 <br />
 
